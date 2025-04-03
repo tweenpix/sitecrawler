@@ -9,11 +9,11 @@ SUBJECT_SUCCESS="✅ Прогрев кеша завершён"
 SUBJECT_ERROR="❌ Ошибка при прогреве кеша"
 LOCK_FILE="/tmp/sitemap_parser.lock"
 
-# === Завершение старых Chromium-процессов ===
-echo "[$(date)] Завершение процессов Chromium..." >> "$LOG_FILE"
-pkill -f '(chrome|chromium|puppeteer)' 2>/dev/null
+# # === Завершение старых Chromium-процессов ===
+# echo "[$(date)] Завершение процессов Chromium..." >> "$LOG_FILE"
+# pkill -f '(chrome|chromium|puppeteer)' 2>/dev/null
 
-sleep 5
+# sleep 5
 
 # === Проверка lock-файла ===
 if [ -f "$LOCK_FILE" ]; then
